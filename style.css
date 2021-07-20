@@ -158,7 +158,7 @@ top blogs styles
 
 .blog {
     display: flex;
-    justify-content: center;
+    align-items: center
 }
 
 .blog img{
@@ -193,6 +193,11 @@ latest course styles
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 23.61px;
+    place-items: center
+}
+
+.courses::-webkit-scrollbar {
+    display: none;
 }
 
 .course {
