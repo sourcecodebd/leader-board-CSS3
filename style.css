@@ -1,0 +1,596 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* 
+-------------------------
+common styles or utilities
+--------------------------
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #562EFF;
+    width: 100%;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+    z-index: 1;
+}
+
+
+.nav {
+    width: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 40.42px;
+    height: 51px;
+    position: absolute;
+    left: -18px;
+
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -18px
+}
+
+.option ul li {
+    margin-left: 36px
+}
+
+.option ul img{
+    margin-left: 36px
+}
+
+.option ul li a{
+    text-decoration: none;
+    color: #FFFFFF
+}
+
+/* Phone-navbar hidden */
+
+.phone-header,.bar-button-nav{
+    display:none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 110px;
+    /* This is to flex the sections side-by-side====> justify-content: center */
+}
+
+.container {
+    background-color: #FFFFFF; 
+    width: 920px;
+    font-size: 24px;
+    padding: 30px;
+    margin-top: -30px;
+    border-radius: 5px;
+}
+
+hr {
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px
+}
+
+/* 
+-----------------
+top players style
+-----------------
+*/
+.section-title {
+    color: #562EFF;
+    margin-top: 3px
+}
+
+.top-players {
+    margin-bottom: 30px
+}
+
+.players {
+    display: grid;
+    /* grid-template-columns: repeat(1fr, 1fr, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+}
+
+.player {
+    display: flex;
+    align-items: center
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.player-name {
+    margin-left: 16px;
+    font-size: 18px
+}
+
+/* 
+----------------
+top blogs styles
+----------------
+*/
+.blogs {
+    display: grid;
+    /* grid-template-columns: repeat(1fr, 1fr, 1fr); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+
+.blog {
+    display: flex;
+    justify-content: center;
+}
+
+.blog img{
+    width: 177px;
+    height: 117px;
+}
+
+.blog-info {
+    margin-left: 16px;
+}
+
+.blog-title {
+    font-size: 20px;
+}
+
+.blog-author {
+    color: #9F9F9F;
+    font-size: 16px
+}
+
+.blog-author a{
+    color: #562EFF;
+    text-decoration: none;
+}
+
+/* 
+--------------------
+latest course styles
+--------------------
+*/
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 23.61px;
+}
+
+.course {
+    margin: 10px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+
+    /*Alternative: text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+}
+
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-title {
+    font-size: 20.0336px;
+    color: #1E1E1E;
+    width: 100%;
+}
+
+.course-author {
+    font-size: 14.6913px;
+    color:#ED6B4F;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    font-size: 14.6913px;
+    
+}
+
+.rating {
+    margin-right: 21.37px
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.blank {
+    color: #AEAEAE;
+    margin-right: 10.71px
+}
+
+.course-duration {
+    background-color: #FFE4E8;
+    border-radius: 14.6913px;
+    width: 71px;
+    height: 20.03px;
+    font-size: 14.6913px;
+    display: flex;
+    padding: 2px 10px 2px 10px;
+    font-family: Open Sans;
+    justify-content: center;
+
+}
+
+.course-duration .fa-clock{
+    color: #FF4A60;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+.time {
+    color: #FF4A60;
+    margin-right: 5px
+}
+
+.hour {
+    color: #FF4A60;
+    margin-right: 5px
+}
+
+/* 
+--------------
+@media queries
+--------------
+*/
+@media only screen and (max-width: 688px) {
+
+    body {
+        width: 100%;
+    }
+
+/* Navbar hidden */
+    .header {
+        display: none
+    }
+
+    .icon img{
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+
+/* Phone-navbar starts*/
+    
+    .phone-header{
+        display:block;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: #562EFF;
+        padding-bottom: 50px;
+    }
+
+    .bar-button-nav ul{
+        position: relative;
+    }
+    
+    .bar-button{
+        color:#fff;
+        position: relative;
+        left: 150px;
+        top: 10px
+    }
+
+    .bar-button-nav ul li{
+
+      padding: 10px 20px;
+      list-style-type: none;
+      margin-left: -40px;
+        
+    }
+
+    .bar-button-nav ul li img {
+        padding-left: 45%;
+    }
+
+    .bar-button-nav ul li a{
+     
+        text-decoration: none;
+        background-color: rgb(35, 62, 218);
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 25px;
+        color:#fff
+        
+    }
+
+    .bar-button-nav ul li a:hover{
+
+        background-color: tomato
+    }
+    #check{
+        display: none;
+    }
+
+    #check:checked ~.bar-button-nav{
+        display:block;
+        position: absolute;
+        width: 100%;
+        right:0px;
+        top:80px;
+        z-index: 1;
+        background-color:#FFE4E8;
+        transition: 1s; 
+    }
+    
+    #check:not(:checked)~.bar-button-nav{
+        position:relative; 
+        top:-999px;
+        height: 0px;
+        margin-top: -100px;      
+    }
+            
+    .bar-button a{
+
+       font-size: 30px;
+       cursor: pointer;   
+    }
+
+/* Phone-navbar ends*/
+
+    main {
+
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .players, .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* alternative */
+
+    /* .blogs, .courses, .players {
+        display: block
+    } */
+
+    .courses {
+        overflow-x: hidden;
+        overflow: scroll
+    }
+
+
+    .option {
+        display: none
+    }
+
+    }
+    
+
+/* Tablet devices */
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+
+    body {
+        width: 100%;
+    }
+
+/* Navbar hidden */
+    .header {
+        display: none
+    }
+
+    .icon img{
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+
+/* Phone-navbar starts*/
+    
+    .phone-header{
+        display:block;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: #562EFF;
+        padding-bottom: 50px;
+    }
+
+    .bar-button-nav ul{
+        position: relative;
+    }
+    
+    .bar-button{
+        color:#fff;
+        position: relative;
+        left: 300px;
+        top: 10px
+    }
+
+    .bar-button-nav ul li{
+
+      padding: 10px 20px;
+      list-style-type: none;
+      margin-left: -40px;
+        
+    }
+
+    .bar-button-nav ul li img {
+        padding-left: 45%;
+    }
+
+    .bar-button-nav ul li a{
+     
+        text-decoration: none;
+        background-color: rgb(35, 62, 218);
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 25px;
+        color:#fff
+        
+    }
+
+    .bar-button-nav ul li a:hover{
+
+        background-color: tomato
+    }
+    #check{
+        display: none;
+    }
+
+    #check:checked ~.bar-button-nav{
+        display:block;
+        position: absolute;
+        width: 100%;
+        right:0px;
+        top:80px;
+        z-index: 1;
+        background-color:#FFE4E8;
+        transition: 1s; 
+    }
+    
+    #check:not(:checked)~.bar-button-nav{
+        position:relative; 
+        top:-999px;
+        height: 0px;
+        margin-top: -100px;      
+    }
+            
+    .bar-button a{
+
+       font-size: 30px;
+       cursor: pointer;   
+    }
+
+/* Phone-navbar ends*/
+
+    main {
+
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .players, .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* alternative */
+
+    /* .blogs, .courses, .players {
+        display: block
+    } */
+
+    .courses {
+        overflow-x: hidden;
+        overflow: scroll
+    }
+
+
+    .option {
+        display: none
+    }
+
+    }
+
+
+/* Tablet devices */
+
+@media only screen and (min-width: 993px) and (max-width: 1440px) {
+
+    body {
+        width: 100%;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    main {
+
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .players, .blogs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* alternative */
+
+    /* .blogs, .courses, .players {
+        display: block
+    } */
+
+    .courses {
+        overflow-x: hidden;
+        overflow: scroll
+    }
+}
